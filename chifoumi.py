@@ -25,13 +25,13 @@ while i <= manche:
         elif joueur == ordi:
             print('Equality :', end=' ')
             manche += 1
-            if mode == 1 or mode == 3:
+            if mode == 1 or mode == 2:
                 score += 1
         print(f'{tabColor[joueur]}{tabChoice[joueur]}\033[1;37m VS {tabColor[ordi]}{tabChoice[ordi]}\033[0m')
         i += 1
 if score >= 8020:
     print(f'\n\033[1;33;43mRoyal victory !\nScore : {score}, computer : {manche - score}\033[0m')
-elif score >= manche / 2 and (mode == 1 or mode == 2):
+elif score >= manche / 2 and (mode == 1 or mode == 3):
     print(f'\n\033[1;37;42mVictory !\nScore : {score}, computer : {manche - score}\033[0m')
 elif score > manche / 2:
     print(f'\n\033[1;37;42mVictory !\nScore : {score}, computer : {manche - score}\033[0m')
